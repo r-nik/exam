@@ -228,7 +228,7 @@ namespace exam
             request.AddQueryParameter("movieId", nonExistingMovieId);
             var response = client.Execute(request);
 
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode. BadRequest));
 
         }
 
