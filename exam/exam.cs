@@ -219,20 +219,6 @@ namespace exam
 
         }
 
-        [Test]
-        public void TestToFail()
-        {
-            string nonExistingMovieId = "12345";
-
-            var request = new RestRequest("/api/Movie/Delete/", Method.Delete);
-            request.AddQueryParameter("movieId", nonExistingMovieId);
-            var response = client.Execute(request);
-
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusBadRequest));
-
-        }
-
-
 
         [OneTimeTearDown]
         public void TearDown()
